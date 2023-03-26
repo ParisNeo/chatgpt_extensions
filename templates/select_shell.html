@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Select Shell</title>
+  </head>
+  <body>
+    <h1>Select a Shell</h1>
+    <form action="{{ url_for('start_console') }}" method="POST">
+      <label for="shell">Select a shell:</label>
+      <select name="shell" id="shell">
+        <option value="bash">Bash</option>
+        <option value="cmd">Command Prompt</option>
+        <option value="powershell">PowerShell</option>
+      </select>
+      <button type="submit">Start Console</button>
+    </form>
+  </body>
+</html>

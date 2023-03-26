@@ -1,0 +1,6 @@
+gradio
+Pillow
+requests
+flask
+flask_cors
+transformers
