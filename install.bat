@@ -29,6 +29,10 @@ if exist env\Scripts\activate.bat (
 )
 
 echo Requirements installed successfully.
+
+echo Creating chatgpt_extensions folder in Documents (here you can find all outputs of your tool)
+set "documents=%USERPROFILE%\Documents"
+mkdir "%documents%\chatgpt_extensions"
 echo To run the application, just run run.bat.
 pause
 goto :end

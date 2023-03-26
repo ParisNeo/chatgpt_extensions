@@ -1,5 +1,5 @@
 import subprocess
-from flask import Flask, jsonify, request, redirect, url_for, render_template
+from flask import Flask, jsonify, request, render_template
 from flask_cors import CORS
 global output
 
@@ -35,7 +35,7 @@ def run_command(command):
     # Wait for the output to be generated
     time.sleep(1.0)
 
-run_command("cd ~\Documents")
+run_command("cd ~\Documents\chatgpt_extensions")
 
 
 def watch_output():
@@ -92,7 +92,7 @@ def execute_command():
     output = ""
     return jsonify(output=output_lines)
 
-@app.route('/')
+@app.route('/console')
 def index():
     return render_template('index.html')
 

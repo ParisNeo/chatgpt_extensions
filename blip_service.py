@@ -43,11 +43,12 @@ check_model()
 print("Ok")
 
 # Load blip for question answer
-print("Loading Blip for question answering")
+print("Loading Blip for question answering...",end="")
 model_url = str(Path(__file__).parent/'models/blip_vqa.pth')
 qa_model = blip_vqa(pretrained=model_url, image_size=image_size, vit='base', med_config = 'BLIP/configs/med_config.json')
 qa_model.eval()
 qa_model = qa_model.to(device)
+print("OK")
 
 blip_dict={"image":None,"Questions":[]}
 
