@@ -18,7 +18,6 @@ if exist env\Scripts\activate.bat (
         python -m pip install --upgrade pip || goto :error
         pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117 || goto :error
         pip install -r requirements.txt || goto :error
-        pip install -r BLIP/requirements.txt || goto :error
     )
 ) else (
     echo Virtual environment not found, creating...
@@ -26,7 +25,6 @@ if exist env\Scripts\activate.bat (
     call env\Scripts\activate.bat && (
         pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117 || goto :error
         pip install -r requirements.txt || goto :error
-        pip install -r BLIP/requirements.txt || goto :error
     )
 )
 
