@@ -23,14 +23,14 @@ then
     source env/bin/activate && {
         echo "Virtual environment found. Updating dependencies..."
         python -m pip install --upgrade pip || exit 1
-        pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117 || exit 1
+        pip install torch torchvision torchaudio || exit 1
         pip install -r requirements.txt || exit 1
     }
 else
     echo "Virtual environment not found, creating..."
     python -m venv env || exit 1
     source env/bin/activate && {
-        pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu117 || exit 1
+        pip install torch torchvision torchaudio || exit 1
         pip install -r requirements.txt || exit 1
     }
 fi
